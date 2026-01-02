@@ -1,0 +1,556 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css");
+
+/* ------------------ GLOBAL ------------------ */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  /*background-image: url('https://img.freepik.com/premium-photo/design-visually-captivating-abstract-data-background_1106493-59476.jpg') ;*/
+  margin: 0;
+  font-family: "Segoe UI", sans-serif;
+  background: linear-gradient(#265565, #265565, #2e647d);
+  color: #fff;
+}
+
+/* ------------------ LAYOUT ------------------ */
+.container {
+  background-image: url('https://img.freepik.com/premium-photo/design-visually-captivating-abstract-data-background_1106493-59476.jpg') ;
+  display: flex;
+  height: 100vh;
+}
+
+/* ------------------ SIDEBAR ------------------ */
+/* ------------------ SIDEBAR ------------------ */
+.sidebar {
+  width: 120px;
+  background: rgba(9, 68, 104, 0.45);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 30px;
+}
+
+/* Sidebar Buttons */
+.sidebar button {
+  width: 90px;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  color: #fff;
+
+  margin: 14px 0;
+  padding: 14px 0;
+  border-radius: 12px;
+
+  display: flex;
+  flex-direction: column;      /* icon top, text bottom */
+  align-items: center;
+  gap: 6px;
+
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* Icon */
+.sidebar button i {
+  font-size: 22px;
+}
+
+/* Text under icon */
+.sidebar button span {
+  font-size: 12px;
+  opacity: 0.85;
+}
+
+/* Hover Effect */
+.sidebar button:hover {
+  background: rgba(255, 255, 255, 0.15);
+  border-color: #00e5ff;
+  transform: scale(1.05);
+}
+
+/* Active Button */
+.sidebar button.active {
+  background: rgba(0, 229, 255, 0.25);
+  border-color: #00e5ff;
+}
+
+
+/* ------------------ MAIN ------------------ */
+.main {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 40px;
+  overflow-y: auto;
+}
+
+/* ------------------ SECTION ------------------ */
+.section {
+  width: 100%;
+  display: none;
+}
+
+.section.active {
+  display: flex;
+  justify-content: center;
+}
+
+/* ------------------ GLASS CARD ------------------ */
+.glass {
+  background: rgba(255, 255, 255, 0.18);
+  backdrop-filter: blur(14px);
+  border-radius: 24px;
+  padding: 40px;
+  max-width: 650px;
+  width: 100%;
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.25);
+}
+
+/* ------------------ DOCUMENT VERIFICATION ------------------ */
+.doc-box h2 {
+  margin: 0 0 10px;
+  font-size: 28px;
+}
+
+.doc-box p {
+  margin-bottom: 25px;
+  opacity: 0.9;
+}
+.doc-box input[type="file"]::file-selector-button {
+  background: #00e5ff;
+  color: #000;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 20px;          /* 👈 curved button */
+  cursor: pointer;
+  font-weight: 600;
+  margin-right: 12px;
+}
+
+.doc-box input[type="file"]::file-selector-button:hover {
+  background: #00c9e0;
+}
+
+
+.doc-box input[type="file"] {
+  width: 100%;
+  padding: 14px;
+  border-radius: 25px;          /* 👈 curved border */
+  background: #ffffff;
+  color: #000;
+  border: 2px solid #00e5ff;    /* optional highlight border */
+  margin-bottom: 30px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+
+/* ------------------ BUTTON ------------------ */
+.submit-btn {
+  display: block;
+  margin: auto;
+  background: #083c5922;
+  color: #fff;
+  border: none;
+  padding: 14px 35px;
+  border-radius: 30px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+.submit-btn:hover {
+  background: #838f86;
+}
+
+/* ------------------ STATUS ------------------ */
+.status {
+  margin-top: 25px;
+  padding: 14px;
+  border-radius: 14px;
+  text-align: center;
+  font-weight: 600;
+}
+
+.status.success {
+  background: rgba(40, 167, 69, 0.75);
+}
+
+/* ------------------ CHATBOT ------------------ */
+.chatbox {
+  height: 550px;
+  display: flex;
+  flex-direction: column;
+}
+
+.chat-window {
+  flex: 1;
+  overflow-y: auto;
+  padding-right: 10px;
+}
+
+.msg {
+  padding: 12px 16px;
+  margin: 10px 0;
+  border-radius: 18px;
+  max-width: 75%;
+}
+
+.bot {
+  background: #6a11cb;
+  align-self: flex-start;
+}
+
+.user {
+  background: #f1f1f1;
+  color: #000;
+  align-self: flex-end;
+}
+
+/* ------------------ CHAT INPUT ------------------ */
+.chat-input {
+  display: flex;
+  margin-top: 15px;
+}
+
+.chat-input input {
+  flex: 1;
+  padding: 12px;
+  border-radius: 25px;
+  border: none;
+  outline: none;
+}
+
+.chat-input button {
+  margin-left: 12px;
+  padding: 12px 25px;
+  border-radius: 25px;
+  border: none;
+  background: #00e5ff;
+  color: #000;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* ------------------ APPLICATIONS ------------------ */
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  padding: 14px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  text-align: left;
+}
+
+th {
+  font-weight: 600;
+}
+/* Form container */
+.form-box {
+  max-width: 1000px;
+  margin: auto;
+  padding: 40px 50px;
+}
+
+/* Grid layout */
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;                 /* SPACE BETWEEN INPUTS */
+  margin-bottom: 35px;      /* SPACE BEFORE BUTTON */
+}
+
+/* Inputs & dropdowns */
+.form-grid input,
+.form-grid select {
+  height: 55px;
+  padding: 0 18px;
+  border-radius: 28px;
+  border: none;
+  font-size: 16px;
+  outline: none;
+}
+
+/* Button wrapper */
+.button-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;         /* GAP FROM FORM */
+}
+
+/* Proceed button */
+.submit-btn {
+  padding: 16px 40px;
+  border-radius: 30px;
+  font-size: 18px;
+  background: #3b6f7f;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.submit-btn:hover {
+  background: #2f5c69;
+  transform: translateY(-2px);
+}
+/* ===== RESULT CONTAINER ===== */
+/* ================= RESULT SECTION ================= */
+
+.result-box {
+  padding: 32px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* -------- TOP STATUS CARDS -------- */
+.result-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-bottom: 35px;
+}
+
+.status-card {
+  background: #6f8f9b;
+  padding: 26px;
+  border-radius: 18px;
+  text-align: center;
+  color: #fff;
+}
+
+.status-card h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.status-card p {
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.status-card.approved {
+  border-bottom: 4px solid #00e676;
+  box-shadow: 0 0 18px rgba(0, 230, 118, 0.45);
+}
+
+.status-card.rejected {
+  border-bottom: 4px solid #ff5252;
+  box-shadow: 0 0 18px rgba(255, 82, 82, 0.45);
+}
+
+/* -------- GRAPHS LAYOUT -------- */
+.graph-grid {
+  display: grid;
+  /* Change from 65% 35% to a narrower ratio */
+  grid-template-columns: 55% 45%; 
+  gap: 30px;
+  align-items: center;
+}
+
+/* Add this to ensure the bar graph doesn't feel too stretched */
+.graph-card {
+  background: #3e5f69;
+  padding: 22px;
+  border-radius: 18px;
+  height: 360px;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box; /* Ensures padding doesn't add to width */
+}
+
+.graph-card h3 {
+  text-align: center;
+  margin-bottom: 12px;
+}
+
+/* FIX CHART OVERFLOW */
+.graph-card canvas {
+  max-height: 260px !important;
+}
+
+/* -------- BUTTON -------- */
+.button-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 35px;
+}
+
+/* -------- RESPONSIVE -------- */
+@media (max-width: 900px) {
+  .result-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .graph-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .graph-card {
+    height: 300px;
+  }
+}
+/* Main White Container */
+.chat-container {
+  width: 100%;
+  max-width: 800px;
+  height: 650px;
+  margin: 0 auto;
+  background: #ffffff; /* Solid White */
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  border: 1px solid #e2e8f0;
+}
+
+/* Header - Solid Professional Blue */
+.chat-header-custom {
+  padding: 15px 20px;
+  background: #1e3a8a; 
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Chat Area - Light Gray Background for Contrast */
+.chat-messages-window {
+  flex: 1;
+  overflow-y: auto;
+  padding: 20px;
+  background: #f8fafc; /* Very light gray to make bubbles pop */
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* Improved Message Bubbles */
+.message-bubble {
+  padding: 12px 16px;
+  border-radius: 12px;
+  font-size: 14px;
+  line-height: 1.5;
+  max-width: 80%;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+}
+
+.message-bubble.bot {
+  background: #ffffff;
+  color: #334155;
+  border: 1px solid #e2e8f0;
+  align-self: flex-start;
+  border-bottom-left-radius: 2px;
+}
+
+.message-bubble.user {
+  background: #2563eb;
+  color: #ffffff;
+  align-self: flex-end;
+  border-bottom-right-radius: 2px;
+}
+
+/* Service Pills Grid - Clean White Section */
+.services-grid-wrapper {
+  padding: 15px;
+  background: #ffffff;
+  border-top: 1px solid #e2e8f0;
+}
+
+.pill-scroll {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+}
+
+.service-pill {
+  background: #ffffff;
+  border: 1px solid #2563eb;
+  color: #2563eb;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.service-pill:hover {
+  background: #eff6ff;
+  transform: translateY(-1px);
+}
+
+/* Input Area - Clean and Simple */
+.chat-input-footer {
+  padding: 15px;
+  background: #ffffff;
+  border-top: 1px solid #e2e8f0;
+  display: flex;
+  gap: 10px;
+}
+
+.chat-input-footer input {
+  flex: 1;
+  background: #f1f5f9;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  padding: 10px 15px;
+  color: #1e293b;
+  outline: none;
+}
+
+.chat-input-footer input:focus {
+  border-color: #2563eb;
+  background: #ffffff;
+}
+/* 1. The Row should have NO background color */
+.message-row {
+  display: flex;
+  width: 100%;
+  margin-bottom: 15px;
+  background: transparent !important; /* This removes that purple bar */
+}
+
+/* 2. Bot Message Alignment (Left) */
+.message-row.bot {
+  justify-content: flex-start;
+}
+
+/* 3. User Message Alignment (Right) */
+.message-row.user {
+  justify-content: flex-end;
+}
+
+/* 4. The actual Bubble Style */
+.message-bubble {
+  padding: 12px 18px;
+  border-radius: 18px;
+  max-width: 75%;
+  font-size: 14px;
+  line-height: 1.5;
+  position: relative;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+/* 5. Clean White for Bot (No Purple behind it!) */
+.message-bubble.bot {
+  background-color: #2563eb !important; 
+  color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-bottom-left-radius: 2px;
+}
+
+/* 6. Professional Blue for User */
+.message-bubble.user {
+  background-color: #2563eb !important;
+  color: #ffffff;
+  border-bottom-right-radius: 2px;
+}

@@ -1,0 +1,55 @@
+.lp-container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #020617, #0f172a);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #e5e7eb;
+}
+
+.lp-card {
+  max-width: 750px;
+  padding: 40px;
+  background: #020617;
+  border-radius: 18px;
+  box-shadow: 0 0 35px rgba(56, 189, 248, 0.25);
+  text-align: center;
+}
+
+.lp-card h1 {
+  font-size: 34px;
+  color: #38bdf8;
+}
+
+.lp-subtitle {
+  margin-top: 10px;
+  font-size: 17px;
+  color: #94a3b8;
+}
+
+.lp-description {
+  margin: 20px 0;
+  line-height: 1.7;
+  color: #cbd5f5;
+}
+
+.lp-highlights {
+  text-align: left;
+  max-width: 480px;
+  margin: 20px auto;
+}
+
+.lp-highlights div {
+  margin: 8px 0;
+}
+
+.lp-btn {
+  margin-top: 30px;
+  padding: 14px 34px;
+  font-size: 16px;
+  border: none;
+  border-radius: 12px;
+  background: linear-gradient(90deg, #2563eb, #22d3ee);
+  color: white;
+  cursor: pointer;
+}
